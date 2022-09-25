@@ -12,3 +12,9 @@
 */
 
 Route::get('/order', 'OrderController@index');
+
+Route::get('/', function() {
+    return view('orders/index');
+});
+
+Route::get('/', 'OrderController@index');
