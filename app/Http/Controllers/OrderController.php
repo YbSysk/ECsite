@@ -8,14 +8,15 @@ use Illuminate\Http\Request;
 class OrderController extends Controller
 {
     /**
- * Post一覧を表示する
+ * Order一覧を表示する
  * 
- * @param Post Postモデル
- * @return array Postモデルリスト
+ * @param Order Orderモデル
+ * @return array Orderモデルリスト
  */
 public function index(Order $order)
 {
-    return $order->get();
+    return view('orders/index')->with(['orders' => $order->getPaginateByLimit()]);
+    
 }
 
 }
