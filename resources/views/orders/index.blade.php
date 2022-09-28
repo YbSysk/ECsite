@@ -12,7 +12,7 @@
         <div class='posts'>
             @foreach ($orders as $order)
              <div class='post'>
-                 <h2 class='title'>{{ $order->title }}</h2>
+                 <a href='/orders/{{ $order->id }}'><h2 class='title'>{{ $order->title }}</h2></a>
                  <p class='body'>{{ $order->body }}</p>
              </div>
             @endforeach
@@ -22,6 +22,7 @@
             {{ $orders->links() }}
         </div>
         
+        [<a href='/orders/create'>create</a>]
         
     </body>
 </html>
