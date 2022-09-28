@@ -18,3 +18,13 @@ Route::get('/', function() {
 });
 
 Route::get('/', 'OrderController@index');
+
+Route::get('/orders/create', 'OrderController@create');
+
+Route::get('/orders/{order}', 'OrderController@show');
+
+Route::post('/orders', 'OrderController@store');
+
+Route::get('/orders/{order}/edit', 'OrderController@edit');
+Route::put('/orders/{order}', 'OrderController@update');
+
